@@ -3,11 +3,10 @@ def main():
     book_location = "books/frankenstein.txt"
     #gets the text from the file in book_location
     text = open_file(book_location)
-    #prints the number of words in text
-    print(get_num_words(text))
     #get the count of all characters
     chars_count = count_chars(text)
-    print(chars_count)
+    fancy_print(book_location, text, chars_count)
+    
 
 def open_file (location):
     #open the file
@@ -38,6 +37,13 @@ def count_chars(text):
             chars_count[lowered] = 1
     #returns the dictionary
     return chars_count
+
+def fancy_print(book_location, text, chars_count):
+    print(f"--- Begin report of {book_location} ---")
+    print(f"{get_num_words(text)} words found in the document")
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    for letter in letters:
+        print(f"The '{letter}' character was found {chars_count[letter]} times")
 
 
 main()
