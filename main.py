@@ -43,6 +43,7 @@ def fancy_print(book_location, text, chars_count):
     print(f"{get_num_words(text)} words found in the document")
     #sets up a list of all the letters in the alphabet; all lowercase
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    #for each of the letters it will print the number of times it occurs 
     for letter in letters:
         print(f"The '{letter}' character was found {chars_count[letter]} times")
     print("--- End report ---")
